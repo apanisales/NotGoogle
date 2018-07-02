@@ -18,3 +18,4 @@ java Driver [-url seed] [-limit total] [-port num]
 * **-port num**: "num" is the port the web server should use to accept socket connections. 8080 is the default port used if "num" is not provided.
 
 * *Note: Flags may be provided in any order*
+* *Note: localhost is used as the server*
