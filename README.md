@@ -6,7 +6,7 @@ A search engine web application
 * Implemented multithreading with Runnable tasks in order to improve the speed of performing searches on the inverted index.
 * Utilized a MySQL database to allow for user accounts.
 
-Usage for web application
+Usage for web application:
 ```
 javac Driver.java
 
