@@ -16,4 +16,4 @@ java Driver [-url seed] [-limit total] [-port num]
 * **-limit total**: "-limit" indicates the next argument "total" is the total number of URLs to crawl (including the seed URL) when building the index. 50 is the default value if this flag is not properly provided.
 * **-port num**: "num" is the port the web server should use to accept socket connections. 8080 is the default port used if "num" is not provided.
 
-* Note: Flags may be provided in any order
+* *Note: Flags may be provided in any order*
