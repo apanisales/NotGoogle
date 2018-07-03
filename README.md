@@ -13,7 +13,7 @@ javac Driver.java
 
 java Driver [-url seed] [-limit total] [-port num] [-threads num]
 ```
-* **-url seed**: "seed" is the seed URL the web crawler initially crawl to build the inverted index.
+* **-url seed**: "seed" is the seed URL the web crawler initially crawls to build the inverted index.
 * **-limit total**: the flag -limit indicates the next argument "total" is the total number of URLs to crawl (including the seed URL) when building the index. 50 is the default value if this flag is not properly provided.
 * **-port num**: "num" is the port the web server should use to accept socket connections. 8080 is the default port used if "num" is not provided.
 * **-threads num**: the flag -threads indicates the next argument "num" is the number of threads to use. If an invalid number of threads are provided, 5 threads are used as default. If the -threads flag is not provided, then the program will be single-threaded.
