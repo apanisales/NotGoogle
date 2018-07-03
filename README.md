@@ -23,9 +23,9 @@ java Driver [-url seed] [-limit total] [-port num] [-threads num]
 
 ## Other Features
 
-* This program can build an inverted index by processing all of the HTML files in a directory and its subdirectories.
+* Can build an inverted index by processing all of the HTML files in a directory and its subdirectories.
 * The inverted index can be written to a JSON file.
-* Is able to parse a query file, generate a sorted list of search results from the inverted index, and support writing those results to a JSON file. 
+* Able to parse a query file, generate a sorted list of search results from the inverted index, and support writing those results to a JSON file. 
 
 Usage for other features:
 ```
