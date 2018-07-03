@@ -3,7 +3,7 @@
 A search engine web application
 
 * Created a web crawler that gathers words that could be used as search terms from the web and uses them and the websites they were found on to build an inverted index data structure.
-* Implemented multithreading with Runnable tasks in order to improve the speed of performing searches on the inverted index.
+* Implemented multithreading using a work queue and Runnable tasks which improved the speed of the web crawler and building and performing searches on the inverted index.
 * Utilized a MySQL database to allow for user accounts.
 * The relevant websites found from performing a search are initially ranked in order of the number of appearances of the search terms in the HTML file. Locations where the search term(s) are more frequent are ranked above others. For locations that have the same frequency of search term(s), locations where the words appear in earlier positions are ranked above others. For locations that have the same frequency and position, the results are sorted by path in case-insensitive order.
 
