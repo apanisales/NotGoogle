@@ -60,7 +60,7 @@ public class SearchServlet extends LoginBaseServlet {
 		out.printf("<!DOCTYPE html>%n");
 		out.printf("<html lang=\"en\">%n");
 		
-		// Search Brand (5 points):
+		// Search Brand
 		out.printf("<head>");
 		out.printf("<title>%s</title>", TITLE);
 		out.printf("<style> "
@@ -102,7 +102,7 @@ public class SearchServlet extends LoginBaseServlet {
 		out.printf("<button name='history' type='submit' value='Clear'>Clear History</button>");
 		out.printf("<br>");
 		
-		// Partial Search Toggle (5 points)
+		// Partial Search Toggle
 		out.printf("<p>Partial search ON or OFF: </p>%n");
 		out.printf("<label class='switch' for='partialSearchToggle'>");
 		if (request.getParameter("partialSearch") != null && request.getParameter("partialSearch").equals("ON")) {
@@ -113,7 +113,7 @@ public class SearchServlet extends LoginBaseServlet {
 		out.printf("<span class='slider round'></span> </label>%n");
 		out.printf("<br>");
 		
-		// Private Search Options (5 points)
+		// Private Search Options
 		out.printf("<p>Private search ON or OFF:</p>%n");
 		out.printf("<select name='privateSearch'>");
 		
@@ -139,7 +139,7 @@ public class SearchServlet extends LoginBaseServlet {
 		
 		out.printf("<div id='historyDiv'>  </div>%n");
 		
-		// Search History (10 points)
+		// Search History
 		if (request.getParameter("history") != null && request.getParameter("history").equals("Show")) {
 			out.printf("<script> var div = document.getElementById('historyDiv');%n");
 			out.printf("div.style.display = 'initial';");
@@ -157,7 +157,7 @@ public class SearchServlet extends LoginBaseServlet {
 			historyDB.put(getUsername(request), new TreeMap<String,String>());
 		} else if (request.getParameter("seed") != null && request.getParameter("seed").length() != 0) {
 			
-			// New Crawl (10 points)
+			// New Crawl
 			try {
 				WebCrawler crawler = new WebCrawler(Driver.staticLimit);
 				crawler.threadsBuildIndex(new URL(request.getParameter("seed")), Driver.staticThreads);
@@ -173,7 +173,7 @@ public class SearchServlet extends LoginBaseServlet {
 			
 		} else if (request.getParameter("query") != null && request.getParameter("query").length() != 0) {
 			
-			// Time Stamps (5 points)
+			// Time Stamps
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");  
 			LocalDateTime now = LocalDateTime.now(); 
 		    
@@ -194,7 +194,7 @@ public class SearchServlet extends LoginBaseServlet {
 			String[] words = WordParser.parseWords(request.getParameter("query"));
 			try {
 				
-				// Search Statistics (5 points)
+				// Search Statistics
 				double startTime = System.nanoTime();
 				if (request.getParameter("partialSearch") != null && request.getParameter("partialSearch").equals("ON")) {
 					searchResults = mainIndex.partialSearch(words);
