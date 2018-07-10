@@ -32,7 +32,7 @@ public class LoginWelcomeServlet extends LoginBaseServlet {
 			
 			HttpSession session = request.getSession();
 			
-			// Last Login Time (5 points)
+			// Last Login Time
 			if (lastLoginTimeDB.get(getUsername(request)) != null) {
 				out.printf("<p> Last login time: %s </p>%n", lastLoginTimeDB.get(getUsername(request)));
 			}
@@ -52,7 +52,7 @@ public class LoginWelcomeServlet extends LoginBaseServlet {
 			
 			out.printf("<br>");
 			
-			// Logged In Users (5 points)
+			// Logged In Users
 			out.printf("<form>"
 					+ "<button name='seeUsers' type='submit' value='Show'>See Last Five Users</button>"
 					+ "<button id='closeUsers' style='display:none;' name='seeUsers' type='submit' value='Close'>Close</button>"
