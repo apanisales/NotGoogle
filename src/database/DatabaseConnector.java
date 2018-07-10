@@ -12,10 +12,9 @@ import java.util.Properties;
 import java.util.Set;
 
 /**
- * This class is designed to test your database configuration. You need to have
+ * This class is designed to test the database configuration. It is necessary to have
  * a database.properties file with username, password, database, and hostname.
- * You must also have the tunnel to stargate.cs.usfca.edu running if you are
- * off-campus.
+ * It is also necessary to tunnel to stargate.cs.usfca.edu if running off-campus.
  */
 public class DatabaseConnector {
 
