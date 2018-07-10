@@ -5,7 +5,6 @@
  */
 public class LoginDatabaseTester {
 
-	// Should really convert this to unit tests...
 	public static void main(String[] args) throws Exception {
 		Status status = null;
 		LoginDatabaseHandler logindb = LoginDatabaseHandler.getInstance();
